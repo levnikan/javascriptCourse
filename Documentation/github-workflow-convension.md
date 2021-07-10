@@ -1,17 +1,17 @@
 # Github workflow naming convention and tips
 
-- [Branch naming/workflow](#branch-naming/workflow)
-- [Pull request naming/workflow](#pull-request-naming/workflow)
+- [Branch naming/workflow](#branch-namingworkflow)
+- [Pull request naming/workflow](#pull-request-namingworkflow)
 
 ## Branch naming/workflow
-Branch name: `<type>/<ticket-number>-<name-separated-by-dashes>`
+Branch name: `<type>/<issue-number>-<name-separated-by-dashes>`
 
 Where type is one of below:
 - `chore` = general improvements / refactors / add missing tests
 - `feat` = new feature
 - `fix` = for bugs
 
-### Create and checkout into a new branch
+### Create a new branch and checkout into it
 Example: ```git checkout -b chore/2077-unknown-url-redirect-route```
 
 ### Stage files for commit
@@ -24,10 +24,12 @@ Example: ```git commit -m “https://github.com/levnikan/javascriptCourse/issues
 
 ### Push files to remote repository
 Push to created branch: ```git push origin <your branch name>```
+Example: ```git push chore/2077-unknown-url-redirect-route```
 
 ## Pull request naming/workflow
-Pull request title: `<type>/<ticket-number> <Description like in ticket>`
-Text: `Closes <url from Zenhub issue> … write description on the new line, if necessary`
+Pull request title: `<type>/<issue-number> <Description like in ticket>`
+
+Text: `Closes` <url from Zenhub issue> … write description on the new line, if necessary
 
 Don’t forget to:
 - Test locally
