@@ -4,9 +4,9 @@
 
 ### Table of Contents
 
-- [Working with local repositories](##heading)
-- [Working with remote repositories](##heading-1)
-- [Advanced Git Commands](##heading-2)
+- [Working with local repositories](#working-with-local-repositories)
+- [Working with remote repositories](#working-with-remote-repositories)
+- [Advanced Git Commands](#advanced-git-commands)
 
 ## Working with local repositories
 
@@ -179,6 +179,7 @@ Deleted branch new_feature (was 0254c3d).
 ```
 
 ### git checkout
+
 To start working in a different branch, use git checkout to switch branches.
 
 Usage:
@@ -226,10 +227,12 @@ Fast-forward
  homepage/index.html | 297 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  1 file changed, 297 insertions(+)
  create mode 100644 homepage/index.html
-Working with remote repositories
 ```
 
+## Working with remote repositories
+
 ### git remote
+
 To connect a local repository with a remote repository. A remote repository can have a name set to avoid having to remember the URL of the repository.
 
 Usage:
@@ -260,12 +263,13 @@ Note: A remote repository can have any name. It’s common practice to name the 
 ```
 
 ### git clone
+
 To create a local working copy of an existing remote repository, use git clone to copy and download the repository to a computer. Cloning is the equivalent of git init when working with a remote repository. Git will create a directory locally with all files and repository history.
 
 Usage:
 
 ```
-$ git clone <remote_URL>
+git clone <remote_URL>
 ```
 
 In Practice:
@@ -281,11 +285,13 @@ Checking connectivity... done.
 ```
 
 ### git pull
+
 To get the latest version of a repository run git pull. This pulls the changes from the remote repository to the local computer.
 
 Usage:
+
 ```
-$ git pull <branch_name> <remote_URL/remote_name>
+git pull <branch_name> <remote_URL/remote_name>
 ```
 
 In Practice:
@@ -311,12 +317,13 @@ Already up-to-date.
 ```
 
 ### git push
+
 Sends local commits to the remote repository. git push requires two parameters: the remote repository and the branch that the push is for.
 
 Usage:
 
 ```
-$ git push <remote_URL/remote_name> <branch>
+git push <remote_URL/remote_name> <branch>
 ```
 
 In Practice:
@@ -337,6 +344,7 @@ To git@account_name.git.beanstalkapp.com:/acccount_name/repository_name.git
 ## Advanced Git Commands
 
 ### git stash
+
 To save changes made when they’re not in a state to commit them to a repository. This will store the work and give a clean working directory. For instance, when working on a new feature that’s not complete, but an urgent bug needs attention.
 
 Usage:
