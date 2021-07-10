@@ -29,7 +29,15 @@ Example: ```git push chore/2077-unknown-url-redirect-route```
 ## Pull request naming/workflow
 Pull request title: `<type>/<issue-number> <Description like in ticket>`
 
-Text: `Closes` <url from Zenhub issue> … write description on the new line, if necessary
+Description: `Closes <url from Zenhub issue>` and description on the new line, if necessary.
+
+Example: 
+
+```
+Closes https://github.com/levnikan/javascriptCourse/issues/5
+This PR:
+- adds documentation for git workflow
+```
 
 Don’t forget to:
 - Test locally
