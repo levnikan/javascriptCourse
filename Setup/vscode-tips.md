@@ -1,8 +1,4 @@
-# VS Code setup
-
-## Default tab size
-
-2 spaces
+# VS Code tips
 
 ## Extensions
 
@@ -38,4 +34,8 @@
 - pustelto.bracketeer (easy bracket swap)
 - yzhang.markdown-all-in-one (markdown helper makes bulk code adjustments easy)
 - ms-python.python (python helper) Note: it automatically installs `Pylance` and `Jupyter`
+
+## Default tab size
+
+2 spaces
   
