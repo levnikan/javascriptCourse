@@ -1,12 +1,25 @@
-# Git tips
+*Main git commands*
 
-## Main commands
-
-### Table of Contents
+Table of Contents
 
 - [Working with local repositories](#working-with-local-repositories)
+  - [git init](#git-init)
+  - [git add](#git-add)
+  - [git commit](#git-commit)
+  - [git status](#git-status)
+  - [git config](#git-config)
+  - [git branch](#git-branch)
+  - [git checkout](#git-checkout)
+  - [git merge](#git-merge)
 - [Working with remote repositories](#working-with-remote-repositories)
+  - [git remote](#git-remote)
+  - [git clone](#git-clone)
+  - [git pull](#git-pull)
+  - [git push](#git-push)
 - [Advanced Git Commands](#advanced-git-commands)
+  - [git stash](#git-stash)
+  - [git log](#git-log)
+  - [git rm](#git-rm)
 
 ## Working with local repositories
 
@@ -275,7 +288,7 @@ git clone <remote_URL>
 In Practice:
 
 ```
-$ git clone git@account_name.git.beanstalkapp.com:/acccount_name/repository_name.git
+$ git clone git@github.com:levnikan/javascriptCourse.git
 Cloning into 'repository_name'...
 remote: Counting objects: 5, done.
 remote: Compressing objects: 100% (3/3), done.
