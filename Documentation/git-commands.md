@@ -1,4 +1,4 @@
-*Main git commands*
+_Main git commands_
 
 Table of Contents
 
@@ -125,7 +125,7 @@ Changes to be committed:
 
         new file:   homepage/index.html
 
-# Message when all files have been staged and committed 
+# Message when all files have been staged and committed
 $ git status
 On branch SecretTesting
 nothing to commit, working directory clean
@@ -185,7 +185,7 @@ $ git branch -a
   remotes/origin/stable
   remotes/origin/staging
   remotes/origin/master -> origin/SecretTesting
-  
+
 # Delete a branch
 $ git branch -d new_feature
 Deleted branch new_feature (was 0254c3d).
@@ -428,7 +428,7 @@ commit 4c0f37c711623d20fc60b9cbcf393d515945952f
 Author: Brian Kerr <my@emailaddress.com>
 Date:   Tue Oct 25 17:46:11 2016 -0500
 
-    Updating the wording of the homepage footer 
+    Updating the wording of the homepage footer
 
 commit 0254c3da3add4ebe9d7e1f2e76f015a209e1ef67
 Author: Ashley Harpp <my@emailaddress.com>
@@ -452,7 +452,7 @@ commit 4c0f37c711623d20fc60b9cbcf393d515945952f
 Author: Brian Kerr <my@emailaddress.com>
 Date:   Tue Oct 25 17:46:11 2016 -0500
 
-    Updating the wording of the homepage footer 
+    Updating the wording of the homepage footer
 ```
 
 ### git rm

@@ -4,34 +4,41 @@
 - [Pull request naming/workflow](#pull-request-namingworkflow)
 
 ## Branch naming/workflow
+
 Branch name: `<type>/<issue-number>-<name-separated-by-dashes>`
 
 Where type is one of below:
+
 - `chore` = general improvements / refactors / add missing tests
 - `feat` = new feature
 - `fix` = for bugs
 
 ### Create a new branch and checkout into it
-Example: ```git checkout -b chore/2077-unknown-url-redirect-route```
+
+Example: `git checkout -b chore/2077-unknown-url-redirect-route`
 
 ### Stage files for commit
+
 Add changes: `git add <changed files>`
-Example: ```git add .```
+Example: `git add .`
 
 ### Commit files
+
 Commit message: `<url from the issue> <your message>`
-Example: ```git commit -m “https://github.com/levnikan/javascriptCourse/issues/5 add more documentation”```
+Example: `git commit -m “https://github.com/levnikan/javascriptCourse/issues/5 add more documentation”`
 
 ### Push files to remote repository
-Push to created branch: ```git push origin <your branch name>```
-Example: ```git push chore/2077-unknown-url-redirect-route```
+
+Push to created branch: `git push origin <your branch name>`
+Example: `git push chore/2077-unknown-url-redirect-route`
 
 ## Pull request naming/workflow
+
 Pull request title: `<type>/<issue-number> <Description like in ticket>`
 
 Description: `Closes <url from Zenhub issue>` and description on the new line, if necessary.
 
-Example: 
+Example:
 
 ```
 Closes https://github.com/levnikan/javascriptCourse/issues/5
@@ -40,6 +47,7 @@ This PR:
 ```
 
 Don’t forget to:
+
 - Test locally
 - Assign yourself to the issue
 - Put labels e.g. Front End, Bug, etc.

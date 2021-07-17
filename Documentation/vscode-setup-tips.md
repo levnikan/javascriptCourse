@@ -38,4 +38,3 @@
 ## Default tab size
 
 2 spaces
-  
