@@ -11,5 +11,3 @@ console.log(firtstName);
 let _name = "Sergey";
 let $name = "ivan";
 console.log(_name, $name);
-
-const weigtMark = 78;
