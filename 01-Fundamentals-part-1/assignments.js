@@ -31,3 +31,19 @@ heightJohn = 1.76;
 //markHigherBMI = bmiMark > bmiJohn;
 console.log("Mark's BMI is ", bmiMark, ", John's BMI is ", bmiJohn);
 console.log("Mark's BMI is higher than Johns's BMI? - ", markHigherBMI);
+
+calculateBMI(1, 2);
+
+function calculateBMI(weight, height) {
+  return weigtMark / heightMark ** 2;
+}
+
+const calculateBMI2 = (weight, height) => {
+  return weigtMark / heightMark ** 2;
+};
+
+console.log(`${calculateBMI(weigtMark, 1.9).toFixed(2)}, using 'function()'`);
+
+console.log(
+  `${calculateBMI2(weigtMark, 1.9).toFixed(2)}, using 'arrow function =>'`
+);
