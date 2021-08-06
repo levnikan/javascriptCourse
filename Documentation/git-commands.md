@@ -11,7 +11,7 @@ Table of Contents
   - [git branch](#git-branch)
   - [git checkout](#git-checkout)
   - [git merge](#git-merge)
-  - [git reset] (#git-reset)
+  - [git reset](#git-reset)
 - [Working with remote repositories](#working-with-remote-repositories)
   - [git remote](#git-remote)
   - [git clone](#git-clone)
