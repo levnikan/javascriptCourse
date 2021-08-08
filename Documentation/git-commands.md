@@ -12,6 +12,7 @@ Table of Contents
   - [git checkout](#git-checkout)
   - [git merge](#git-merge)
   - [git reset](#git-reset)
+  - [git revert](#git-revert)
 - [Working with remote repositories](#working-with-remote-repositories)
   - [git remote](#git-remote)
   - [git clone](#git-clone)
@@ -245,19 +246,71 @@ Fast-forward
 
 ### git reset
 
-If you want to change or delete your last commit (or few commits).
+`git reset` is a complex, but powerful command that helps you to undo the changes, namely it resets current HEAD (last commit) to the specified state. If you're unfamiliar with `The Three Trees` of git, please check it out [here](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified). `git reset` is used for reverting local changes, if you need need to safely undo public changes (commits that are already on github), use `git revert` instead.
+
 Usage:
 
+`git reset` (same as git reset --mixed) changes HEAD and index trees
+Example: delete last commit, you will see last commit in unstaged area, you can add and commit it
+
 ```
-#Delete last commit, you will see last commit in unstaged area, you can add and commit it
-$ git reset HEAD~
-$ git reset HEAD~2 #delete two last commits
+$ git reset HEAD
+```
 
-#Delete last commit, you will never see your last commit changes. You must be careful with git --hard, because your local changes may be lost
+Example: remove all commits until the specific one (to check the history of commits, you can type `git log`):
+
+```
+$ git reset <commit hash>
+```
+
+`git reset --hard` changes HEAD, index and working directory trees
+Example: delete last commit, you will never see your last commit changes. You must be careful with git --hard, because your local changes may be lost
+
+```
 $ git reset --hard HEAD~
+```
 
-#Move to another commit but not need to touch staging area and index, you can commit your changes (for example rename your commit)
+`git reset --soft` changes only HEAD tree
+Example: Move to another commit but no need to touch staging area and index, you can commit your changes (for example rename your commit)
+
+```
 $ git reset --soft HEAD
+```
+
+Use case: if you want to revert your changes back to origin/main (github repo HEAD - latest commit), you can do it in the following ways:
+
+```
+
+1. safely removing your working directory changes:
+   $ git reset origin/main
+   $ git stash
+
+2. alternatively, you can commit your local changes first (if any) and then save them into backup branch before using reset:
+   $ git commit -m "Backup files"
+   $ git branch my-backup
+   $ git reset origin/main
+
+3. Unsafe way!! It will remove your local changes permanently
+   git reset --hard origin/main
+
+```
+
+### git revert
+
+`git revert` command is a forward-moving undo operation that offers a safe method of undoing changes. Instead of deleting or orphaning commits in the commit history, a revert will create a new commit that inverses the changes specified. This prevents Git from losing history, which is important for the integrity of your revision history and for reliable collaboration.
+
+Examples:
+
+Revert the latest commit:
+
+```
+$ git revert HEAD
+```
+
+Revert to a specific commit (to check the history of commits, you can type `git log`)
+
+```
+$ git revert <commit hash>
 ```
 
 ## Working with remote repositories
@@ -548,6 +601,10 @@ rm 'css/style.min.css'
 $ git rm -r -f css/
 rm 'css/style.css'
 rm 'css/style.min.css'
+
+```
+
+```
 
 ```
 
