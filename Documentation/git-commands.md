@@ -12,12 +12,12 @@ Table of Contents
   - [git checkout](#git-checkout)
   - [git merge](#git-merge)
   - [git reset](#git-reset)
-  - [git revert](#git-revert)
 - [Working with remote repositories](#working-with-remote-repositories)
   - [git remote](#git-remote)
   - [git clone](#git-clone)
   - [git pull](#git-pull)
   - [git push](#git-push)
+  - [git revert](#git-revert)
 - [Advanced Git Commands](#advanced-git-commands)
   - [git stash](#git-stash)
   - [git log](#git-log)
@@ -264,6 +264,7 @@ $ git reset <commit hash>
 ```
 
 `git reset --hard` changes HEAD, index and working directory trees
+
 Example: delete last commit, you will never see your last commit changes. You must be careful with git --hard, because your local changes may be lost
 
 ```
@@ -271,6 +272,7 @@ $ git reset --hard HEAD~
 ```
 
 `git reset --soft` changes only HEAD tree
+
 Example: Move to another commit but no need to touch staging area and index, you can commit your changes (for example rename your commit)
 
 ```
@@ -282,8 +284,8 @@ Use case: if you want to revert your changes back to origin/main (github repo HE
 ```
 
 1. safely removing your working directory changes:
-   $ git reset origin/main
    $ git stash
+   $ git reset origin/main
 
 2. alternatively, you can commit your local changes first (if any) and then save them into backup branch before using reset:
    $ git commit -m "Backup files"
@@ -293,24 +295,6 @@ Use case: if you want to revert your changes back to origin/main (github repo HE
 3. Unsafe way!! It will remove your local changes permanently
    git reset --hard origin/main
 
-```
-
-### git revert
-
-`git revert` command is a forward-moving undo operation that offers a safe method of undoing changes. Instead of deleting or orphaning commits in the commit history, a revert will create a new commit that inverses the changes specified. This prevents Git from losing history, which is important for the integrity of your revision history and for reliable collaboration.
-
-Examples:
-
-Revert the latest commit:
-
-```
-$ git revert HEAD
-```
-
-Revert to a specific commit (to check the history of commits, you can type `git log`)
-
-```
-$ git revert <commit hash>
 ```
 
 ## Working with remote repositories
@@ -439,6 +423,24 @@ Total 5 (delta 2), reused 0 (delta 0)
 To git@account_name.git.beanstalkapp.com:/acccount_name/repository_name.git
 ad189cb..0254c3d SecretTesting -> SecretTesting
 
+```
+
+### git revert
+
+`git revert` command is a forward-moving undo operation that offers a safe method of undoing changes. Instead of deleting or orphaning commits in the commit history, a revert will create a new commit that inverses the changes specified. This prevents Git from losing history, which is important for the integrity of your revision history and for reliable collaboration.
+
+Examples:
+
+Revert the latest commit:
+
+```
+$ git revert HEAD
+```
+
+Revert to a specific commit (to check the history of commits, you can type `git log`)
+
+```
+$ git revert <commit hash>
 ```
 
 ## Advanced Git Commands
