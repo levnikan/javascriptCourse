@@ -1,4 +1,4 @@
-console.log(`This is "assignments.js" file`);
+/*console.log(`This is "assignments.js" file`);
 let country = "Uzbekistan";
 let continent = "Asia";
 let population = 35000000;
@@ -46,4 +46,28 @@ console.log(`${calculateBMI(weigtMark, 1.9).toFixed(2)}, using 'function()'`);
 
 console.log(
   `${calculateBMI2(weigtMark, 1.9).toFixed(2)}, using 'arrow function =>'`
-);
+);*/
+
+console.log("CODING CHALLENGE#2!");
+
+const weigtMark = 78;
+const weightJohn = 1.88;
+const heightMark = 1.69;
+const heightJohn = 1.92;
+if(weigtMark / heightMark ** 2>weightJohn / heightJohn ** 2){
+  console.log("Mark's BMI is higher than John's!");
+}else {
+  console.log("John's BMI is higher than Mark's!");
+}
+
+const MarkWeight = 95;
+const MarkHeight = 1.88;
+const JohnWeight = 85;
+const JohnHeigt = 1.76;
+bmiMark = MarkWeight/MarkHeight**2;
+bmiJohn = JohnWeight/JohnHeigt**2;
+if(bmiJohn > bmiMark) {
+  console.log(`John's BMI (${bmiJohn.toFixed(2)}) is higher than Mark's(${bmiMark.toFixed(2)})!`);
+}else {
+  console.log(`John's BMI (${bmiJohn.toFixed(2)}) is less than Mark's (${bmiMark.toFixed(2)})!`);
+}
