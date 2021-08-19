@@ -41,18 +41,35 @@ if(birthYear <= 2000){
 }
 console.log(century);*/
 
-const birthYear = '1987';
-console.log (Number(birthYear), birthYear);
-console.log (Number(birthYear) + 18);
-console.log (Number ("Ivan"));
+/*const birthYear = "1987";
+console.log(Number(birthYear), birthYear);
+console.log(Number(birthYear) + 18);
+console.log(Number("Ivan"));
 
-let n = '1';
-console.log (n + 1);
-console.log (n-1);
-console.log(2+3+4+'5');
-console.log('10'-'4'-'3'-'2'+'5');
+let n = "1";
+console.log(n + 1);
+console.log(n - 1);
+console.log(2 + 3 + 4 + "5");
+console.log("10" - "4" - "3" - "2" + "5");*/
 
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(""));
+console.log(Boolean({}));
+console.log(Boolean(90));
 
+const money = 10;
+if (money) {
+  console.log("Don't spend it all!!!");
+} else {
+  console.log("You should get a job!");
+}
 
-
-
+let hight = 10;
+if (hight == 0) {
+  console.log("Hight is 0");
+} else if (hight) {
+  console.log("Hight is defined");
+} else {
+  console.log("Hight is undefined!");
+}
