@@ -67,7 +67,15 @@ const JohnHeigt = 1.76;
 bmiMark = MarkWeight / MarkHeight ** 2;
 bmiJohn = JohnWeight / JohnHeigt ** 2;
 if (bmiJohn > bmiMark) {
-  console.log(`John's BMI (${bmiJohn.toFixed(2)}) is higher than Mark's(${bmiMark.toFixed(2)})!`);
+  console.log(
+    `John's BMI (${bmiJohn.toFixed(2)}) is higher than Mark's(${bmiMark.toFixed(
+      2
+    )})!`
+  );
 } else {
-  console.log(`John's BMI (${bmiJohn.toFixed(2)}) is less than Mark's (${bmiMark.toFixed(2)})!`);
+  console.log(
+    `John's BMI (${bmiJohn.toFixed(2)}) is less than Mark's (${bmiMark.toFixed(
+      2
+    )})!`
+  );
 }
