@@ -52,7 +52,7 @@ console.log(n - 1);
 console.log(2 + 3 + 4 + "5");
 console.log("10" - "4" - "3" - "2" + "5");*/
 
-console.log(Boolean(undefined));
+/*console.log(Boolean(undefined));
 console.log(Boolean(null));
 console.log(Boolean(""));
 console.log(Boolean({}));
@@ -72,4 +72,26 @@ if (hight == 0) {
   console.log("Hight is defined");
 } else {
   console.log("Hight is undefined!");
+}*/
+
+const age = "18";
+if (age === 18) {
+  console.log("You are adult - strict");
+}
+if (age == 18) {
+  console.log("You are adult - loose");
+}
+
+const favouriteNum = Number(prompt("What's your favourite number?"));
+console.log(favouriteNum);
+console.log(typeof favouriteNum);
+
+if (favouriteNum === 23) {
+  console.log("23 is a cool number!");
+}
+
+if (favouriteNum !== 23) {
+  console.log("Why not 23?");
+} else if (favouriteNum === 23) {
+  console.log("Cool!");
 }
