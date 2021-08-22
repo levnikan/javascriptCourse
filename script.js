@@ -14,7 +14,7 @@ console.log(_name, $name);
 let $name = 'ivan';
 console.log(_name, $name);*/
 
-const firtstName = "Ivan";
+/*const firtstName = "Ivan";
 const job = "engeneer";
 const birthYear = 1987;
 const year = 2021;
@@ -23,5 +23,4 @@ const Ivan =
 console.log(Ivan);
 const ivanNew = `I'm ${firtstName},a ${birthYear} years old ${job}!`;
 console.log(ivanNew);
-console.log(ivanNew);
-
+console.log(ivanNew);*/

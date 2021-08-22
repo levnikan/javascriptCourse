@@ -48,7 +48,7 @@ console.log(
   `${calculateBMI2(weigtMark, 1.9).toFixed(2)}, using 'arrow function =>'`
 );*/
 
-console.log("CODING CHALLENGE#2!");
+/*console.log("CODING CHALLENGE#2!");
 
 const weigtMark = 78;
 const weightJohn = 1.88;
@@ -78,4 +78,99 @@ if (bmiJohn > bmiMark) {
       2
     )})!`
   );
+}*/
+
+console.log("CODING CHALLENGE#3!");
+
+const DolphinsScore1 = 96;
+const DolphinsScore2 = 108;
+const DolphinsScore3 = 89;
+const CoalasScore1 = 88;
+const CoalasScore2 = 91;
+const CoalasScore3 = 110;
+
+const DolphinsAverageScore =
+  (DolphinsScore1 + DolphinsScore2 + DolphinsScore3) / 3;
+const CoalasAverageScore = (CoalasScore1 + CoalasScore2 + CoalasScore3) / 3;
+console.log(`Dolphins average score is ${DolphinsAverageScore.toFixed(1)}
+Coalas average score is ${CoalasAverageScore.toFixed(1)}`);
+
+if (DolphinsAverageScore > CoalasAverageScore) {
+  console.log("Dolphins are winners!!!");
+} else if (DolphinsAverageScore < CoalasAverageScore) {
+  console.log("Coalas are winners!!!");
+} else {
+  console.log("The result is draw. No winner!!!");
+}
+
+//bonus 1
+const DolphinsScoreG1 = 97;
+const DolphinsScoreG2 = 112;
+const DolphinsScoreG3 = 101;
+const CoalasScoreG1 = 109;
+const CoalasScoreG2 = 95;
+const CoalasScoreG3 = 106;
+
+if (DolphinsScoreG1 > CoalasScoreG1 && DolphinsScoreG1 >= 100) {
+  console.log("The winner of the game 1 is Dolphins!");
+} else if (DolphinsScoreG1 < CoalasScoreG1 && CoalasScoreG1 >= 100) {
+  console.log("The winner of the game 1 is Coalas!");
+} else {
+  console.log("No winner in game 1!!!");
+}
+
+if (DolphinsScoreG2 > CoalasScoreG2 && DolphinsScoreG2 >= 100) {
+  console.log("The winner of the game 2 is Dolphins!");
+} else if (DolphinsScoreG2 < CoalasScoreG2 && CoalasScoreG2 >= 100) {
+  console.log("The winner of the game 2 is Coalas!");
+} else {
+  console.log("No winner in game 2!!!");
+}
+
+if (DolphinsScoreG3 > CoalasScoreG3 && DolphinsScoreG23 >= 100) {
+  console.log("The winner of the game 3 is Dolphins!");
+} else if (DolphinsScoreG3 < CoalasScoreG3 && CoalasScoreG3 >= 100) {
+  console.log("The winner of the game 3 is Coalas!");
+} else {
+  console.log("No winner in game 3!!!");
+}
+
+const DolphinsAverageScoreBonus =
+  (DolphinsScoreG1 + DolphinsScoreG2 + DolphinsScoreG3) / 3;
+const CoalasAverageScoreBonus =
+  (CoalasScoreG1 + CoalasScoreG2 + CoalasScoreG3) / 3;
+
+if (
+  DolphinsAverageScoreBonus > CoalasAverageScoreBonus &&
+  DolphinsAverageScoreBonus >= 100
+) {
+  console.log("The winners are Dolphins!");
+} else if (
+  DolphinsAverageScoreBonus < CoalasAverageScoreBonus &&
+  CoalasAverageScoreBonus >= 100
+) {
+  console.log("The winners are Coalas!");
+} else {
+  console.log("No winner in the competition!!!");
+}
+
+// bonus 2
+if (
+  DolphinsAverageScoreBonus === CoalasAverageScoreBonus &&
+  DolphinsAverageScoreBonus >= 100 &&
+  CoalasAverageScoreBonus < 100
+) {
+  console.log("The winners are Dolphins!");
+} else if (
+  DolphinsAverageScoreBonus === CoalasAverageScoreBonus &&
+  CoalasAverageScoreBonus >= 100 &&
+  DolphinsAverageScoreBonus < 100
+) {
+  console.log("The winners are Coalas!");
+} else if (
+  DolphinsAverageScoreBonus === CoalasAverageScoreBonus &&
+  DolphinsAverageScoreBonus >= 100 &&
+  CoalasAverageScoreBonus >= 100
+) {
+  console.log("No team wins the trophy!!!");
 }
