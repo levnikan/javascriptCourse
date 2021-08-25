@@ -104,12 +104,12 @@ if (DolphinsAverageScore > CoalasAverageScore) {
 }
 
 //bonus 1
-const DolphinsScoreG1 = 97;
-const DolphinsScoreG2 = 112;
+const DolphinsScoreG1 = 107;
+const DolphinsScoreG2 = 101;
 const DolphinsScoreG3 = 101;
-const CoalasScoreG1 = 109;
-const CoalasScoreG2 = 95;
-const CoalasScoreG3 = 106;
+const CoalasScoreG1 = 99;
+const CoalasScoreG2 = 93;
+const CoalasScoreG3 = 105;
 
 if (DolphinsScoreG1 > CoalasScoreG1 && DolphinsScoreG1 >= 100) {
   console.log("The winner of the game 1 is Dolphins!");
@@ -139,7 +139,8 @@ const DolphinsAverageScoreBonus =
   (DolphinsScoreG1 + DolphinsScoreG2 + DolphinsScoreG3) / 3;
 const CoalasAverageScoreBonus =
   (CoalasScoreG1 + CoalasScoreG2 + CoalasScoreG3) / 3;
-
+console.log(`Bonus Dolphins average score ${DolphinsAverageScoreBonus}
+Bonus Coalas average score ${CoalasAverageScoreBonus}`);
 if (
   DolphinsAverageScoreBonus > CoalasAverageScoreBonus &&
   DolphinsAverageScoreBonus >= 100
@@ -150,27 +151,18 @@ if (
   CoalasAverageScoreBonus >= 100
 ) {
   console.log("The winners are Coalas!");
-} else {
-  console.log("No winner in the competition!!!");
-}
-
-// bonus 2
-if (
-  DolphinsAverageScoreBonus === CoalasAverageScoreBonus &&
-  DolphinsAverageScoreBonus >= 100 &&
-  CoalasAverageScoreBonus < 100
-) {
-  console.log("The winners are Dolphins!");
 } else if (
-  DolphinsAverageScoreBonus === CoalasAverageScoreBonus &&
-  CoalasAverageScoreBonus >= 100 &&
-  DolphinsAverageScoreBonus < 100
-) {
-  console.log("The winners are Coalas!");
-} else if (
-  DolphinsAverageScoreBonus === CoalasAverageScoreBonus &&
+  DolphinsAverageScoreBonus === CoalasAverageScoreBonus && //bonus 2
   DolphinsAverageScoreBonus >= 100 &&
   CoalasAverageScoreBonus >= 100
 ) {
-  console.log("No team wins the trophy!!!");
+  console.log("Both teams are winners!");
+} else if (
+  DolphinsAverageScoreBonus === CoalasAverageScoreBonus &&
+  CoalasAverageScoreBonus < 100 &&
+  DolphinsAverageScoreBonus < 100
+) {
+  console.log("No team wins the trophy!!!!");
+} else {
+  console.log("No winner in the competition!!!");
 }
