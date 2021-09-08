@@ -5,7 +5,7 @@
 //If gender is female, function applies 20% discount.
 //If gender is unknown, function applies 30% discount.
 
-const price = 100;
+const price = prompt("Enter your price");
 const gender = prompt("Enter your gender (male, female, unknown)");
 
 // function declaration
@@ -23,7 +23,7 @@ function discountCalc1(price, gender) {
 discountCalc1(price, gender);
 
 //function expression
-const discountCalculation2 = function (price, gender) {
+const discountCal2 = function (price, gender) {
   switch (gender) {
     case "male":
       console.log(`Your price with discount is ${price * 0.9} euro.`);
@@ -38,7 +38,7 @@ const discountCalculation2 = function (price, gender) {
       console.log("Please enter correct gender!");
   }
 };
-discountCalculation2(200, "male");
+discountCal2(price, "male");
 
 //arrow function
 let discountCalc3 = (price, gender) => {
@@ -50,4 +50,4 @@ let discountCalc3 = (price, gender) => {
     ? console.log(`Your price with discount is ${price * 0.7} euro.`)
     : console.log("Please enter correct gender!");
 };
-discountCalc3(300, gender);
+discountCalc3(price, gender);
