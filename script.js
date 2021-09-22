@@ -73,7 +73,7 @@ if (hight == 0) {
 } else {
   console.log("Hight is undefined!");
 }*/
-
+/*
 const age = "18";
 if (age === 18) {
   console.log("You are adult - strict");
@@ -94,4 +94,27 @@ if (favouriteNum !== 23) {
   console.log("Why not 23?");
 } else if (favouriteNum === 23) {
   console.log("Cool!");
-}
+}*/
+
+//arrow functions
+const calcAge = (birthYear) => 2021 - birthYear;
+const age = calcAge(1987);
+console.log(age);
+const yearsUntilretirement = (birthYear, firstName) => {
+  const age = 2021 - birthYear;
+  const retirement = 65 - age;
+  return `${firstName} retires in ${retirement} years`;
+};
+console.log(yearsUntilretirement(1987, "Ivan"));
+
+//Functions calling other functions
+const cutPieces = function (fruit) {
+  return fruit / 4;
+};
+const fruitProcessor = function (apples, oranges) {
+  const applePieces = cutPieces(apples);
+  const orangePieces = cutPieces(oranges);
+  const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange.`;
+  return juice;
+};
+console.log(fruitProcessor(8, 16));
