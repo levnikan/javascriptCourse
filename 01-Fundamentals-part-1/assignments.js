@@ -167,11 +167,11 @@ if (
   console.log("No winner in the competition!!!");
 }
 */
-
+/*
 console.log("CODING CHALLENGE#4!");
 
 const bill = 400;
 const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 console.log(
   `The bill was ${bill}, the tip was ${tip}, and total value ${bill + tip}`
-);
+); */
