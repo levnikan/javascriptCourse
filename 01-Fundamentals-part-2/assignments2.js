@@ -1,5 +1,5 @@
 "use strict";
-console.log("JS Fundamentals. Part 2. Coding challenge #2");
+console.log("JS Fundamentals. Part 2. Coding challenge #1");
 
 const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
 
