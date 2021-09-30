@@ -4,7 +4,7 @@
 //If gender is male, function applies 10% discount.
 //If gender is female, function applies 20% discount.
 //If gender is unknown, function applies 30% discount.
-
+/*
 const price = prompt("Enter your price");
 const gender = prompt("Enter your gender (male, female, unknown)");
 
@@ -50,4 +50,4 @@ let discountCalc3 = (price, gender) => {
     ? console.log(`Your price with discount is ${price * 0.7} euro.`)
     : console.log("Please enter correct gender!");
 };
-discountCalc3(price, gender);
+discountCalc3(price, gender); */
