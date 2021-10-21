@@ -24,12 +24,14 @@ avgKoalas = calcAverage(23, 34, 27);
 checkWinner(avgDolphins, avgKoalas);*/
 
 function calcTip(billValue) {
-  if (50 < billValue < 300) {
+  if (billValue > 50 || billValue < 300) {
     //console.log(`The tip is ${billValue * 0.15}$`);
     return billValue * 0.15;
-  } else if (billValue <= 50 && billValue >= 300) {
+  } else if (billValue <= 50 || billValue >= 300) {
     //console.log(`The tip is ${billValue * 0.2}$`);
     return billValue * 0.2;
+  } else {
+    console.log("Error! Check your bill!!!");
   }
 }
 console.log(`The tip is ${calcTip(100)}$!`);
