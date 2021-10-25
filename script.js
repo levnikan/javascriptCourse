@@ -97,7 +97,7 @@ if (favouriteNum !== 23) {
 }*/
 
 //arrow functions
-const calcAge = (birthYear) => 2021 - birthYear;
+/*const calcAge = (birthYear) => 2021 - birthYear;
 const age = calcAge(1987);
 console.log(age);
 const yearsUntilretirement = (birthYear, firstName) => {
@@ -117,4 +117,14 @@ const fruitProcessor = function (apples, oranges) {
   const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange.`;
   return juice;
 };
-console.log(fruitProcessor(8, 16));
+console.log(fruitProcessor(8, 16));*/
+
+const ivan = {
+  firstName: "Ivan",
+  lastName: "Levchenko",
+  age: 2021 - 1987,
+  job: "engineer",
+  friends: ["Stas", "Sasha", "Timur"],
+};
+console.log(ivan);
+console.log(ivan.job);
