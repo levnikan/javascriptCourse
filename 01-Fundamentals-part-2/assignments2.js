@@ -42,3 +42,38 @@ const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 console.log("Tips are ", tips);
 const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(`Total values are `, totals);
+
+// additional task
+const calcTip1 = function (billValue) {
+  if (billValue > 50 && billValue < 300) {
+    return billValue * 0.15;
+  } else {
+    return billValue * 0.2;
+  }
+};
+const bills1 = [50, 200, 300];
+console.log("Bills are ", bills1);
+const tips1 = [calcTip1(bills1[0]), calcTip1(bills1[1]), calcTip1(bills1[2])];
+console.log("Tips are ", tips1);
+const totals1 = [
+  bills1[0] + tips1[0],
+  bills1[1] + tips1[1],
+  bills1[2] + tips1[2],
+];
+console.log(`Total values are `, totals1);
+
+let calcTip2 = (billValue) => {
+  if (billValue > 50 && billValue < 300) {
+    return billValue * 0.15;
+  } else return billValue * 0.2;
+};
+const bills2 = [0, 100, 1000];
+console.log("Bills are ", bills2);
+const tips2 = [calcTip2(bills2[0]), calcTip2(bills2[1]), calcTip2(bills2[2])];
+console.log("Tips are ", tips2);
+const totals2 = [
+  bills2[0] + tips2[0],
+  bills2[1] + tips2[1],
+  bills2[2] + tips2[2],
+];
+console.log(`Total values are `, totals2);
