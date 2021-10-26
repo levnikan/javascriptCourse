@@ -26,9 +26,7 @@ checkWinner(avgDolphins, avgKoalas);*/
 function calcTip(billValue) {
   if (billValue > 50 && billValue < 300) {
     return billValue * 0.15;
-  } else if (billValue <= 50 && billValue > 0) {
-    return billValue * 0.2;
-  } else if (billValue >= 300) {
+  } else if ((billValue <= 50 && billValue > 0) || billValue >= 300) {
     return billValue * 0.2;
   } else {
     console.log("Error! Check your bill!!!");
@@ -44,12 +42,11 @@ const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(`Total values are `, totals);
 
 // additional task
+// function expression & ternaryoperator
 const calcTip1 = function (billValue) {
-  if (billValue > 50 && billValue < 300) {
-    return billValue * 0.15;
-  } else {
-    return billValue * 0.2;
-  }
+  let tip =
+    billValue > 50 && billValue < 300 ? billValue * 0.15 : billValue * 0.2;
+  return tip;
 };
 const bills1 = [50, 200, 300];
 console.log("Bills are ", bills1);
@@ -62,6 +59,7 @@ const totals1 = [
 ];
 console.log(`Total values are `, totals1);
 
+// arrow function
 let calcTip2 = (billValue) => {
   if (billValue > 50 && billValue < 300) {
     return billValue * 0.15;
