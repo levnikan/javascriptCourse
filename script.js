@@ -128,3 +128,20 @@ const ivan = {
 };
 console.log(ivan);
 console.log(ivan.job);
+const interestedIn = prompt(
+  "What do you want to know about Ivan? Choose between firstName, lastName, age, job, friends, location and email"
+);
+//add properties in object
+ivan.location = "Shirin";
+ivan["email"] = "levchenko-ivan@mail.ru";
+
+if (ivan[interestedIn]) {
+  console.log(ivan[interestedIn]);
+} else {
+  console.log("Wrong request!");
+}
+ivan.location = "Shirin";
+ivan["email"] = "levchenko-ivan@mail.ru";
+console.log(
+  `${ivan.firstName} has ${ivan.friends.length} friends. And his best friend name is ${ivan.friends[0]}.`
+);
