@@ -119,7 +119,7 @@ const fruitProcessor = function (apples, oranges) {
 };
 console.log(fruitProcessor(8, 16));*/
 
-const ivan = {
+/*const ivan = {
   firstName: "Ivan",
   lastName: "Levchenko",
   age: 2021 - 1987,
@@ -144,4 +144,39 @@ ivan.location = "Shirin";
 ivan["email"] = "levchenko-ivan@mail.ru";
 console.log(
   `${ivan.firstName} has ${ivan.friends.length} friends. And his best friend name is ${ivan.friends[0]}.`
+);*/
+
+const ivan = {
+  firstName: "Ivan",
+  lastName: "Levchenko",
+  birthYear: 1987,
+  job: "engineer",
+  friends: ["Stas", "Sasha", "Timur"],
+  hasDriverLisense: false,
+  driverLicense: function () {
+    if (this.hasDriverLisense) {
+      return "a";
+    } else {
+      return "no";
+    }
+  },
+  //calcAge: function (birthYear) {
+  //  return 2021 - birthYear;
+  //},
+  //calcAge: function () {
+  //  return 2021 - this.birthYear;
+  //},
+  calcAge: function () {
+    this.age = 2021 - this.birthYear;
+    return this.age;
+  },
+};
+
+console.log(ivan.calcAge());
+//console.log(ivan["calcAge"](1987));
+
+console.log(
+  `${ivan.firstName} is a ${ivan.age}-age ${
+    ivan.job
+  } and he has ${ivan.driverLicense()} drivers lisense.`
 );
