@@ -23,7 +23,7 @@ avgDolphins = calcAverage(85, 54, 71);
 avgKoalas = calcAverage(23, 34, 27);
 checkWinner(avgDolphins, avgKoalas);*/
 
-function calcTip(billValue) {
+/*function calcTip(billValue) {
   if (billValue > 50 && billValue < 300) {
     return billValue * 0.15;
   } else if ((billValue <= 50 && billValue > 0) || billValue >= 300) {
@@ -74,4 +74,39 @@ const totals2 = [
   bills2[1] + tips2[1],
   bills2[2] + tips2[2],
 ];
-console.log(`Total values are `, totals2);
+console.log(`Total values are `, totals2); */
+
+// JS Fundamentals. Part 2.Coding Challenge #3
+const mark = {
+  fullName: "Mark Miller",
+  height: 1.69,
+  weight: 78,
+  calcBmi: function () {
+    this.bmi = this.weight / this.height ** 2;
+    return this.bmi;
+  },
+};
+console.log(mark.calcBmi());
+const john = {
+  fullName: "John Smith",
+  height: 1.98,
+  weight: 92,
+  calcBmi: function () {
+    this.bmi = this.weight / this.height ** 2;
+    return this.bmi;
+  },
+};
+console.log(john.calcBmi());
+if (mark.calcBmi() < john.calcBmi()) {
+  console.log(
+    `${john.fullName}'s BMI (${john.bmi.toFixed(2)}) is higher than ${
+      mark.fullName
+    }'s (${mark.bmi.toFixed(2)}))`
+  );
+} else {
+  console.log(
+    `${mark.fullName}'s BMI (${mark.bmi.toFixed(2)}) is higher than ${
+      john.fullName
+    }'s (${john.bmi.toFixed(2)}))`
+  );
+}
