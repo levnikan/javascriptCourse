@@ -146,7 +146,8 @@ console.log(
   `${ivan.firstName} has ${ivan.friends.length} friends. And his best friend name is ${ivan.friends[0]}.`
 );*/
 
-const ivan = {
+//OBJECTS
+/*const ivan = {
   firstName: "Ivan",
   lastName: "Levchenko",
   birthYear: 1987,
@@ -179,4 +180,29 @@ console.log(
   `${ivan.firstName} is a ${ivan.age}-age ${
     ivan.job
   } and he has ${ivan.driverLicense()} drivers lisense.`
-);
+);*/
+
+// Loops
+const ivan = ["Ivan", "Levchenko", 2021 - 1987, "engineer", ["Stas", "Sasha", "Timur"], true];
+const types = [];
+for (let i = 0; i < ivan.length; i++) {
+  console.log(ivan[i], typeof ivan[i]);
+  types[i] = typeof ivan[i];
+}
+console.log(types);
+
+//Цикл в цикле
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`__Exercise__${exercise}__`);
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise}: repetition  ${rep}`);
+  }
+}
+
+// While Loop
+let dice = Math.trunc(Math.random() * 6) + 1;
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log("End of the loop");
+}
