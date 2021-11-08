@@ -115,7 +115,7 @@ console.log("Fundamentals part 2. Coding challenge #4");
 const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 const tips = [];
 const totals = [];
-let calcTip = (billValue) => {
+const calcTip = (billValue) => {
   if (billValue > 50 && billValue < 300) {
     return billValue * 0.15;
   } else return billValue * 0.2;
@@ -128,7 +128,7 @@ console.log("Bills are", bills);
 console.log("Tips are", tips);
 console.log("Totals are", totals);
 
-//BONUS
+//BONUS1
 const calcAverage = function (arr) {
   let sum = 0;
   let i = 0;
@@ -140,3 +140,13 @@ const calcAverage = function (arr) {
 };
 calcAverage(totals);
 calcAverage(tips);
+//BONUS2
+const calcAverage2 = (arr) => {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+};
+console.log(calcAverage2(totals));
+console.log(calcAverage2(tips));
