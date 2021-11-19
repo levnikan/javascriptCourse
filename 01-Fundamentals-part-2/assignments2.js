@@ -77,6 +77,7 @@ const totals2 = [
 console.log(`Total values are `, totals2); */
 
 // JS Fundamentals. Part 2.Coding Challenge #3
+/*
 const mark = {
   fullName: "Mark Miller",
   height: 1.69,
@@ -109,4 +110,4 @@ if (mark.calcBmi() < john.calcBmi()) {
       john.fullName
     }'s (${john.bmi.toFixed(2)}))`
   );
-}
+}*/
