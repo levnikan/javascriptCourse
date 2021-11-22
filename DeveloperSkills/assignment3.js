@@ -21,9 +21,27 @@ const temperatures = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
 // - Find min value in temp array
 // - Subtract min from max (amplitude) and return it
 let tmax = temperatures[0];
-for (i = 0; i < temperatures.length; i++) {
-  if (tmax < t[i]) {
-    tmax = t[i];
-  }
+let tmin = temperatures[0];
+for (let i = 0; i < temperatures.length; i++) {
+  if (typeof temperatures[i] !== "number") continue;
+  else if (tmax < temperatures[i]) tmax = temperatures[i];
+  else if (tmin > temperatures[i]) tmin = temperatures[i];
 }
-console.log(tmax);
+//console.log(tmax);
+//console.log(tmin);
+console.log(temperatures);
+console.log(`The temperature amplitude is ${tmax - tmin}!`);
+// PROBLEM 2:
+// Function should now receive 2 arrays of temps
+// 1) Understanding the problem
+// - With 2 arrays, should we implement functionality twice? NO! Just merge two arrays
+// 2) Breaking up into sub-problems
+// - Merge 2 arrays
+const temps1 = [3, -2, -6, -1, 6];
+const temps2 = [-5, 6, 10, 12];
+const temps = temps1.concat(temps2);
+console.log(temps);
+const tempsMax = Math.max(...temps);
+const tempsMin = Math.min(...temps);
+//console.log(tempsMax, tempsMin);
+console.log(`New temperature amplitude is ${tempsMax - tempsMin}!`);
