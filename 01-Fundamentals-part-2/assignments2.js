@@ -77,8 +77,7 @@ const totals2 = [
 console.log(`Total values are `, totals2); */
 
 // JS Fundamentals. Part 2.Coding Challenge #3
-/*
-const mark = {
+/*const mark = {
   fullName: "Mark Miller",
   height: 1.69,
   weight: 78,
@@ -111,3 +110,45 @@ if (mark.calcBmi() < john.calcBmi()) {
     }'s (${john.bmi.toFixed(2)}))`
   );
 }*/
+/*
+console.log("Fundamentals part 2. Coding challenge #4");
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+const calcTip = (billValue) => {
+  if (billValue > 50 && billValue < 300) {
+    return billValue * 0.15;
+  } else return billValue * 0.2;
+};
+for (let i = 0; i < bills.length; i++) {
+  tips.push(calcTip(bills[i]));
+  totals.push(bills[i] + tips[i]);
+}
+console.log("Bills are", bills);
+console.log("Tips are", tips);
+console.log("Totals are", totals);
+
+//BONUS1
+const calcAverage = function (arr) {
+  let sum = 0;
+  let i = 0;
+  while (i < arr.length) {
+    sum += arr[i];
+    i++;
+  }
+  console.log(`The average of array is ${sum / arr.length}`);
+};
+calcAverage(totals);
+calcAverage(tips);
+//BONUS2
+const calcAverage2 = (arr) => {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+};
+console.log(calcAverage2(totals));
+console.log(calcAverage2(tips));
+*/
