@@ -110,6 +110,7 @@ if (mark.calcBmi() < john.calcBmi()) {
     }'s (${john.bmi.toFixed(2)}))`
   );
 }*/
+/*
 console.log("Fundamentals part 2. Coding challenge #4");
 
 const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
@@ -150,3 +151,4 @@ const calcAverage2 = (arr) => {
 };
 console.log(calcAverage2(totals));
 console.log(calcAverage2(tips));
+*/
