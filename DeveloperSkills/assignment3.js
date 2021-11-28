@@ -1,5 +1,5 @@
 "use strict";
-console.log("coding challenge from lecture #59");
+/*console.log("coding challenge from lecture #59");
 ///////////////////////////////////////
 // Using Google, StackOverflow and MDN
 
@@ -44,4 +44,15 @@ console.log(temps);
 const tempsMax = Math.max(...temps);
 const tempsMin = Math.min(...temps);
 //console.log(tempsMax, tempsMin);
-console.log(`New temperature amplitude is ${tempsMax - tempsMin}!`);
+console.log(`New temperature amplitude is ${tempsMax - tempsMin}!`);*/
+
+console.log("Сoding challenge#1");
+const printForecast = function (arr) {
+  let printForecastString = "...";
+  for (let i = 0; i < arr.length; i++) {
+    printForecastString += `${arr[i]}°C in ${i + 1} days...`;
+  }
+  console.log(printForecastString);
+};
+printForecast([17, 21, 13]);
+printForecast([12, 5, -5, 0, 4]);
