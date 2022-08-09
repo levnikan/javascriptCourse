@@ -174,6 +174,18 @@ $ git branch -a
 $ git branch -d <branch_name>
 ```
 
+```
+## 3 operations to raname local and remote branch
+# Rename a branch locally
+$git branch -m old_branch new_branch
+
+# Delete old remote branch
+$git push origin :old_branch
+
+# Push the new branch, set local branch to track the new remote
+$git push --set-upstream origin new_branch
+```
+
 In Practice:
 
 ```
