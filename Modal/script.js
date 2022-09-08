@@ -26,3 +26,12 @@ for (let i = 0; i < btnsOpenModal.length; i++) {
 btnCloseModal.addEventListener('click', closeModal);
 //закрытие окна кликом вне этого окна
 overlay.addEventListener('click', closeModal);
+
+//ожидание события нажатия кнопки
+document.addEventListener('keydown', function (e) {
+  console.log(e.key); //выводим в консоль какая кнопка нажата
+  // проверяем если нажата кнопка ESC и среди списка классов нет hidden, вызываем функцию закрытия окна
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
+  }
+});
