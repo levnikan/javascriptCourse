@@ -16,13 +16,16 @@ let highscore = 0;
 const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
 };
-document.querySelector('.check').addEventListener('click', function () {
+
+const checkTheNumber = function () {
   const guess = Number(document.querySelector('.guess').value);
   //when there is no input
   if (!guess) {
     // document.querySelector('.message').textContent = '❗ No number';
     displayMessage('❗ No number');
     // when player wins
+  } else if (guess < 1 || guess > 20) {
+    displayMessage('Enter correct number (between 1 and 20)');
   } else if (guess === secretNumber) {
     //document.querySelector('.message').textContent = '🎉Brilliant! You are right';
     displayMessage('🎉Brilliant! You are right');
@@ -50,7 +53,17 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.score').textContent = 0;
     }
   }
+  document.querySelector('.guess').value = '';
+};
+
+document.querySelector('.check').addEventListener('click', checkTheNumber);
+document.addEventListener('keydown', function (e) {
+  console.log(e.key);
+  if (e.key === 'Enter') {
+    checkTheNumber();
+  }
 });
+
 /*
     // when input number is too low
   } else if (guess < secretNumber) {
