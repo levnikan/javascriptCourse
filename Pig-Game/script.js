@@ -7,12 +7,27 @@ const score0El = document.querySelector('#score--0'); //select element by id wit
 const score1El = document.getElementById('score--1');
 const current0El = document.getElementById('current--0');
 const current1El = document.getElementById('current--1');
+const winner0 = document.getElementById('winner--0');
+const winner1 = document.getElementById('winner--1');
+const showRules = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
 const diceEl = document.querySelector('.dice');
 const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
-
+const btnOpenRules = document.querySelector('.btn--rules'); //button show rules
+const btnCloseRules = document.querySelector('.close-modal'); //button close rules
 let scores, currentScore, activePlayer, playing;
+
+const openModal = function () {
+  showRules.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+};
+
+const closeModal = function () {
+  showRules.classList.add('hidden');
+  overlay.classList.add('hidden');
+};
 
 const newGame = function () {
   // starting conditions
@@ -29,6 +44,8 @@ const newGame = function () {
   player1El.classList.remove('player--winner');
   player0El.classList.add('player--active');
   player1El.classList.remove('player--active');
+  winner0.classList.add('hidden');
+  winner1.classList.add('hidden');
 };
 
 const switchPlayer = function () {
@@ -44,6 +61,9 @@ newGame();
 
 //Reseting the game
 btnNew.addEventListener('click', newGame);
+btnOpenRules.addEventListener('click', openModal);
+btnCloseRules.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
 
 //Rolling dice functionality
 btnRoll.addEventListener('click', function () {
@@ -84,6 +104,9 @@ btnHold.addEventListener('click', function () {
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');
+      document
+        .querySelector(`#winner--${activePlayer}`)
+        .classList.remove('hidden');
       //remove the dice
       diceEl.classList.add('hidden');
     } else {
