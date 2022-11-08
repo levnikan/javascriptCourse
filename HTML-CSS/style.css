@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+title {
+  text-align: center;
+}
+body {
+  background-color: coral;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  padding: 50px;
+}
+h1 {
+  font-size: 35px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+h2 {
+  margin-bottom: 25px;
+  text-align: center;
+}
+p {
+  margin-bottom: 20px;
+}
+#your-name {
+  background-color: chocolate;
+  border: 3px solid rgb(15, 14, 14);
+  width: 400px;
+  padding: 25px;
+  margin-top: 30px;
+}
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+}
+a {
+  background-color: rgb(63, 138, 33);
+}
+#frontend-roadmap-image {
+  width: 500px;
+}
+#your-name h2 {
+  color: rgb(13, 79, 46);
+}
+.first {
+  color: red;
+}
