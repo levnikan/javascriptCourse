@@ -1,6 +1,6 @@
-//'use strict';
+'use strict';
 
-function calcAge(birthYear) {
+/*function calcAge(birthYear) {
   const age = 2022 - birthYear;
   //console.log(firstName);
   const output = 'New output!';
@@ -26,4 +26,46 @@ function calcAge(birthYear) {
 //console.log(millenial);
 const firstName = 'Ivan';
 console.log(calcAge(1987));
-//console.log(age);
+//console.log(age);*/
+
+//Scoping and the temporary dead zone (TDZ)
+
+//Variables
+console.log(me);
+//console.log(job);
+//console.log(year);
+var me = 'Ivan';
+let job = 'engineer';
+const year = 1987;
+
+//Functions
+console.log(addDecl(3, 7));
+//console.log(addExpr(5, 5));
+//console.log(addArrow(1, 10));
+
+function addDecl(a, b) {
+  return a + b;
+}
+
+const addExpr = function (a, b) {
+  return a + b;
+};
+var addArrow = (a, b) => a + b;
+
+//Example
+console.log(NumProducts);
+if (!NumProducts) {
+  deleteShopingCart();
+}
+var NumProducts = 100;
+function deleteShopingCart() {
+  console.log('all products deleted!');
+}
+
+var x = 5;
+const y = 8;
+let z = 4;
+
+console.log(x === window.x);
+console.log(y === window.y);
+console.log(z === window.z);
