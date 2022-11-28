@@ -28,7 +28,8 @@ const firstName = 'Ivan';
 console.log(calcAge(1987));
 //console.log(age);*/
 
-//Scoping and the temporary dead zone (TDZ)
+/*
+//******Scoping and the temporary dead zone (TDZ)*****
 
 //Variables
 console.log(me);
@@ -69,3 +70,39 @@ let z = 4;
 console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
+*/
+
+//*******This keyword in practice*****
+console.log(this);
+
+const calcAge = function (birthYear) {
+  console.log(2022 - birthYear);
+  console.log(this);
+};
+calcAge(1987);
+
+const calcAgeArr = birthYear => {
+  console.log(2022 - birthYear);
+  console.log(this);
+};
+calcAgeArr(1989);
+
+const ivan = {
+  firstNam: 'Ivan',
+  birthYear: 1987,
+  calcAge: function () {
+    console.log(this);
+    console.log(2022 - this.birthYear);
+  },
+};
+ivan.calcAge();
+
+const tanya = {
+  firstNam: 'Tatyana',
+  birthYear: 1988,
+};
+tanya.calcAge = ivan.calcAge;
+tanya.calcAge();
+
+const func = ivan.calcAge;
+func();
