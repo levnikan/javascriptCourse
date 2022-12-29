@@ -40,8 +40,59 @@ const restaurant = {
     ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} 
     will be delivered to ${adress} at ${time}`);
   },
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here is your pasta with ${ing1}, ${ing2}, ${ing3}`);
+  },
 };
 
+/////////////
+// The spread operator (...)
+const arr = [6, 7, 8];
+const manNewArray = [1, 2, 6, 7, 8];
+console.log(manNewArray);
+
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+console.log(...newArr);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+// copy Array
+const mainMenuCopy = [...restaurant.mainMenu];
+//Join 2 arrays
+const complexMenu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(complexMenu);
+
+//Iterables in JS: arrays, strings, maps, sets, NOT objects
+const str = 'Ivan';
+const letters = [...str, '', 'Levchenko'];
+console.log(...letters, letters);
+// !!!!console.log (`${...str} Levchenko`);
+
+//Example
+restaurant.orderPasta('tomato', 'beef', 'cheese');
+//const ingredients = [
+//  prompt("Let's make pasta. Ingredient 1?"),
+//  prompt('Ingredient 2?'),
+//  prompt('Ingredient 3)'),
+//];
+//console.log(ingredients);
+//restaurant.orderPasta(...ingredients);
+
+//objects
+const newRestaurant = {
+  founder: 'G.L. Buffon',
+  Foundationyear: '1999',
+  ...restaurant,
+};
+console.log(newRestaurant);
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Ristorante Roma';
+console.log(restaurant.name, restaurantCopy.name);
+
+////////////////////////////
+/*
+//Destructing objects
 restaurant.orderDelivery({
   time: '22:30',
   adress: 'chambil2 - 3',
@@ -53,6 +104,8 @@ restaurant.orderDelivery({
   adress: 'Nukus str., 2',
   starterIndex: 1,
 });
+
+
 
 //Destructing objects
 const { name, openingHours, categories } = restaurant;
@@ -79,6 +132,7 @@ const {
   fri: { open: o, close: c },
 } = openingHours;
 console.log(o, c);
+*/
 
 /*
 ///////////////////////////////
