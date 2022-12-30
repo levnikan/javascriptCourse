@@ -48,7 +48,39 @@ const restaurant = {
     console.log(otherIngridients);
   },
 };
+///////////////////
+//Nulish Coalesing operator
+restaurant.numGuests = 0;
+const guests = restaurant.numGuests || 10;
+console.log(guests);
+//Nulish: null und underfined (NOT 0 or '')
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
 
+/*
+///////////////////////////
+//Short circuiting (&& and ||)
+//Use ANY data type, return ANY data type, short-crcuiting
+console.log('______OR_____');
+console.log(3 || 'Ivan');
+console.log('' || 'Ivan');
+console.log(true || 0);
+console.log(undefined || null);
+console.log(undefined || null || '' || 'Ivan' || null);
+restaurant.numGuests = 23;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+console.log('______AND_____');
+console.log('Ivan' && 0);
+console.log('Hello' && undefined && 23 && underfined);
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'onion');
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'beef');
+*/
+
+/*
 //////////
 //REST pattern destructuring
 // SPREAD, because on RIGHT side of =
@@ -84,7 +116,7 @@ const x = [23, 5, 7];
 add(...x);
 
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
-restaurant.orderPizza('mushrooms');
+restaurant.orderPizza('mushrooms');*/
 /*
 /////////////
 // The spread operator (...)
