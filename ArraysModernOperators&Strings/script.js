@@ -7,7 +7,7 @@ const flights =
 // Data needed for first part of the section
 const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
-const hours = {
+const openingHours = {
   [weekdays[3]]: {
     open: 12,
     close: 22,
@@ -33,7 +33,7 @@ const restaurant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
   //ES6 enhased objects literals
-  hours,
+  openingHours,
   orderDelivery: function ({
     starterIndex = 1,
     mainIndex = 0,
@@ -52,6 +52,36 @@ const restaurant = {
     console.log(otherIngridients);
   },
 };
+
+if (restaurant.openingHours && restaurant.openingHours.mon) {
+  console.log(restaurant.openingHours.mon.open);
+}
+//With optional chaining
+console.log(restaurant.openingHours.mon?.open);
+console.log(restaurant.openingHours?.mon?.open);
+
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+for (const day of days) {
+  console.log(day);
+  const open = restaurant.openingHours[day]?.open ?? 'closed';
+  console.log(`On ${day}, we open at ${open}`);
+}
+//with methods
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+console.log(restaurant.orderRisott?.(0, 1) ?? 'Method does not exist');
+//with arrays
+//const users = [{ name: 'Ivan', email: 'hello@gmail.com' }];
+const users = [];
+console.log(users[0]?.name ?? 'User array is empty');
+if (users.length > 0) {
+  console.log(users[0].name);
+} else {
+  console.log('user array empty');
+}
+
+//if (restaurant.openingHours.fri) {
+//  console.log(restaurant.openingHours.fri.open);
+//}
 /*
 // The FOR-OF loop
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
