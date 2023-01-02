@@ -59,7 +59,7 @@ const game = {
     team2: 6.5,
   },
   printGoals: function (...scoredGoals) {
-    console.log(...scoredGoals);
+    console.log(`${scoredGoals.length} goals was scored by ${scoredGoals}`);
   },
 };
 //1
@@ -81,13 +81,19 @@ console.log(allPlayers);
 const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
 console.log(players1Final);
 //5
-const team1 = game.odds.team1;
-const team2 = game.odds.team2;
-const draw = game.odds.x;
+//const team1 = game.odds.team1;
+//const team2 = game.odds.team2;
+//const draw = game.odds.x;
+//console.log(team1, draw, team2);
+const {
+  odds: { team1, x: draw, team2 },
+} = game;
 console.log(team1, draw, team2);
+
 //6
 game.printGoals(...game.scored);
 game.printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
+game.printGoals('Lewandowski', 'Kimmich');
 //7
 team1 < team2 && console.log(`More likely to win is ${game.team1}`);
 team1 > team2 && console.log(`More likely to win is ${game.team2}`);
