@@ -48,6 +48,34 @@ const restaurant = {
     console.log(otherIngridients);
   },
 };
+
+//////Logical Assignment operators
+
+const rest1 = {
+  name: 'Capri',
+  numGuest: 0,
+};
+const rest2 = {
+  name: 'La Piazza',
+  owner: 'Giovanni Rossi',
+};
+// OR assignment operator
+//rest2.numGuest = rest2.numGuest || 10;
+//rest1.numGuest = rest1.numGuest || 10;
+//rest1.numGuest ||= 10;
+//rest2.numGuest ||= 10;
+//Nulish Coalesing operator
+//rest1.numGuest ??= 10;
+//rest2.numGuest ??= 10;
+
+//AND assignment operator
+//rest2.owner = rest2.owner && '<ANONYMOUS>';
+//rest1.owner = rest1.owner && '<ANONYMOUS>';
+rest2.owner &&= '<ANONYMOUS>';
+rest1.owner &&= '<ANONYMOUS>';
+console.log(rest1);
+console.log(rest2);
+/*
 ///////////////////
 //Nulish Coalesing operator
 restaurant.numGuests = 0;
@@ -56,7 +84,7 @@ console.log(guests);
 //Nulish: null und underfined (NOT 0 or '')
 const guestCorrect = restaurant.numGuests ?? 10;
 console.log(guestCorrect);
-
+*/
 /*
 ///////////////////////////
 //Short circuiting (&& and ||)
