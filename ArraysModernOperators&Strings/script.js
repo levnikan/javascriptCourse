@@ -52,6 +52,34 @@ const restaurant = {
     console.log(otherIngridients);
   },
 };
+//SETS
+const orderSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+console.log(orderSet);
+console.log(new Set('Ivan')); //string set
+console.log(orderSet.size); // size of set (number of unique elements)
+console.log(orderSet.has('Pizza')); //check of inclusion
+console.log(orderSet.has('Bread'));
+orderSet.add('Garlic Bread'); // adding element in set
+orderSet.delete('Risotto'); // delete element
+//orderSet.clear(); //clear set
+console.log(orderSet);
+for (const order of orderSet) console.log(order); //loping set
+//Set example
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+console.log(
+  new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size
+);
+console.log(new Set('levchenkoivan').size);
+/*
 //////LOOPing objects
 //property names
 
@@ -72,7 +100,7 @@ console.log(entries);
 //[key, value]
 for (const [key, { open, close }] of entries) {
   console.log(`on ${key} we open at ${open} and close at ${close}`);
-}
+}*/
 /*
 ////////Optional chaining?////
 if (restaurant.openingHours && restaurant.openingHours.mon) {
