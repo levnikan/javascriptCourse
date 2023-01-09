@@ -18,7 +18,7 @@ Suppose we get data from a web service about a certain game (below). In this cha
 TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Then, call the function again with players from game.scored
 
 GOOD LUCK 😀*/
-/*
+
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
@@ -61,7 +61,7 @@ const game = {
   printGoals: function (...scoredGoals) {
     console.log(`${scoredGoals.length} goals was scored by ${scoredGoals}`);
   },
-};*/
+};
 
 /*
 //1
@@ -104,7 +104,7 @@ team1 > team2 && console.log(`More likely to win is ${game.team2}`);
 ///////////////////////////////////////
 // Coding Challenge #2
 
-/* 
+/*
 Let's continue with our football betting app!
 
 1. Loop over the game.scored array and print each player name to the console, along with the goal number (Example: "Goal 1: Lewandowski")
@@ -115,7 +115,8 @@ Let's continue with our football betting app!
       Odd of victory Borrussia Dortmund: 6.5
 Get the team names directly from the game object, don't hardcode them (except for "draw"). HINT: Note how the odds and the game objects have the same property names 😉
 
-BONUS: Create an object called 'scorers' which contains the names of the players who scored as properties, and the number of goals as the value. In this game, it will look like this:
+BONUS: Create an object called 'scorers' which contains the names of the players who scored as properties, and the number of goals as the value. 
+In this game, it will look like this:
       {
         Gnarby: 1,
         Hummels: 1,
@@ -139,11 +140,22 @@ for (const value of odd) {
 console.log(oddSumm / odd.length);
 //3
 const entries = Object.entries(game.odds);
-console.log(entries);
+//console.log(entries);
 for (const [team, odd] of entries) {
   const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
   console.log(`Odd of ${teamStr}: ${odd}`);
 }*/
+
+// Bonus Task
+const scorers = {};
+for (let player of game.scored) {
+  if (scorers[player] in game.scored === false) {
+    scorers[player] = 1;
+  } else {
+    scorers[player]++;
+  }
+}
+console.log(scorers);
 
 ///////////////////////////////////////
 // Coding Challenge #3
@@ -159,7 +171,7 @@ Let's continue with our football betting app! This time, we have a map with a lo
 
 GOOD LUCK 😀
 */
-
+/*
 const gameEvents = new Map([
   [17, '⚽️ GOAL'],
   [36, '🔁 Substitution'],
@@ -202,3 +214,4 @@ for (const [key, value] of gameEvents) {
     ? console.log(`[FIRST HALF] ${key}: ${value}`)
     : console.log(`[SECOND HALF] ${key}: ${value}`);
 }
+*/
