@@ -248,8 +248,15 @@ Afterwards, test with your own test data!
 GOOD LUCK 😀
 */
 ///my code
-document.body.append(document.createElement('textarea'));
-document.body.append(document.createElement('button'));
+const textarea = document.createElement('textarea');
+textarea.placeholder = 'Put your text here';
+document.body.append(textarea);
+//document.body.appendChild(document.createElement('textarea'));
+//document.body.appendChild(document.createElement('button'));
+const button = document.createElement('button');
+button.innerText = 'Click me!';
+document.body.append(button);
+
 document.querySelector('button').addEventListener('click', function () {
   const text = document.querySelector('textarea').value;
   //console.log(text);
