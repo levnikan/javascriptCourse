@@ -70,6 +70,8 @@ const high5 = function () {
 document.body.addEventListener('click', high5);
 ['Ivan', 'Tatyana', 'Mariya'].forEach(high5);
 */
+
+/*
 // functions returning functions
 const greet = function (greeting) {
   return function (name) {
@@ -84,3 +86,46 @@ greeterHey('Ivan');
 greeterHey('Koshka');
 greet('Hello')('Ivan');
 greetArrow('Hi')('Ivan');
+*/
+
+/////Call and apply methods
+const lufthansa = {
+  airline: 'Lufthansa',
+  alCode: 'LH',
+  bookings: [],
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.alCode}${flightNum}`
+    );
+    this.bookings.push({ flight: `${this.alCode}${flightNum}`, name });
+  },
+};
+lufthansa.book(234, 'Ivan Levchenko');
+lufthansa.book(635, 'Nickolay Levchenko');
+
+const eurowings = {
+  airline: 'Eurowings',
+  alCode: 'EW',
+  bookings: [],
+};
+//now book is regular function not a method of lufthansa
+const book = lufthansa.book;
+
+//call method
+book.call(eurowings, 23, 'Tatyana Levchenko');
+console.log(eurowings);
+book.call(lufthansa, 555, 'John Wall');
+console.log(lufthansa);
+const swiss = {
+  airline: 'Swiss Airlnes',
+  alCode: 'LX',
+  bookings: [],
+};
+book.call(swiss, 586, 'Marry Jane');
+console.log(swiss);
+
+//Apply method
+const flighData = [583, 'George Cooper'];
+book.apply(swiss, flighData);
+console.log(swiss);
+book.call(swiss, ...flighData);
