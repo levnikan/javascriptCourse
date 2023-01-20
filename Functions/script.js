@@ -87,7 +87,7 @@ greeterHey('Koshka');
 greet('Hello')('Ivan');
 greetArrow('Hi')('Ivan');
 */
-
+/*
 /////Call and apply methods
 const lufthansa = {
   airline: 'Lufthansa',
@@ -170,3 +170,15 @@ const addTaxRate = function (rate) {
 const addVAT2 = addTaxRate(0.23);
 console.log(addVAT2(100));
 console.log(addVAT2(23));
+*/
+
+/////Immediately Invoked function expressions
+const runOnce = function () {
+  console.log('This will never ran again');
+};
+runOnce();
+//IIFE
+(function () {
+  console.log(`This will never run again`);
+})();
+(() => console.log(`This will ALSO never run again`))();
