@@ -171,7 +171,7 @@ const addVAT2 = addTaxRate(0.23);
 console.log(addVAT2(100));
 console.log(addVAT2(23));
 */
-
+/*
 /////Immediately Invoked function expressions
 const runOnce = function () {
   console.log('This will never ran again');
@@ -182,3 +182,53 @@ runOnce();
   console.log(`This will never run again`);
 })();
 (() => console.log(`This will ALSO never run again`))();
+*/
+
+/////CLOSURES/////
+/*
+const secureBooking = function () {
+  let passangerCount = 0;
+  return function () {
+    passangerCount++;
+    console.log(`${passangerCount} passangers`);
+  };
+};
+const booker = secureBooking();
+booker();
+booker();
+booker();
+console.dir(booker);
+*/
+///Example 1
+let f;
+const g = function () {
+  const a = 23;
+  f = function () {
+    console.log(a * 2);
+  };
+};
+const h = function () {
+  const b = 77;
+  f = function () {
+    console.log(b * 2);
+  };
+};
+g();
+f();
+console.dir(f);
+//re-assigning f function
+h();
+f();
+console.dir(f);
+
+///Example 2
+const boardPassengers = function (n, wait) {
+  const perGroup = n / 3;
+  setTimeout(function () {
+    console.log(`We are now boarding all ${n} passengers`);
+    console.log(`There are 3 groups with ${perGroup} passengers`);
+  }, wait * 1000);
+  console.log(`Will start boarding in ${wait} seconds`);
+};
+const perGroup = 1000;
+boardPassengers(210, 3);
