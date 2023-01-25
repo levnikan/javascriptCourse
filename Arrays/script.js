@@ -148,8 +148,10 @@ currencyUnique.forEach(function (value, _, map) {
   console.log(`${value}: ${value}`);
 });
 */
-const eurToUsd = 1.1;
+
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+/*
+const eurToUsd = 1.1;
 // const movementsUSD = movements.map(function (mov) {
 //   return mov * eurToUsd;
 // });
@@ -173,3 +175,30 @@ const movementsDescriptions = movements.map(
   // }
 );
 console.log(movementsDescriptions);
+*/
+
+// FILTER method
+const deposits = movements.filter(function (mov, i, arr) {
+  return mov > 0;
+});
+console.log(deposits);
+const depositsFor = [];
+for (const mov of movements) if (mov > 0) depositsFor.push(mov);
+console.log(depositsFor);
+const withdrawals = movements.filter(mov => mov < 0);
+console.log(withdrawals);
+
+//REDUCE method
+//accumulator is like SNOWBALL
+// const balance = movements.reduce(function (acc, cur, i, arr) {
+//   //console.log(`Iteration ${i}:${acc}`);
+//   return acc + cur;
+// }, 0);
+const balance = movements.reduce((acc, cur) => {
+  //console.log(`Iteration ${i}:${acc}`);
+  return acc + cur;
+}, 0);
+console.log(balance);
+let balance2 = 0;
+for (const mov of movements) balance2 += mov;
+console.log(balance2);
