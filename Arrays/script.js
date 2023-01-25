@@ -115,7 +115,7 @@ console.log(arr3[arr3.length - 1]);
 console.log(arr3.slice(-1)[0]);
 console.log(arr.at(-1));
 */
-
+/*
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 for (const [i, movement] of movements.entries()) {
   if (movements > 0) {
@@ -147,3 +147,29 @@ const currencyUnique = new Set(['USD', 'GBR', 'USD', 'EUR']);
 currencyUnique.forEach(function (value, _, map) {
   console.log(`${value}: ${value}`);
 });
+*/
+const eurToUsd = 1.1;
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movementsUSD = movements.map(function (mov) {
+//   return mov * eurToUsd;
+// });
+//MAP method
+const movementsUSD = movements.map(mov => mov * eurToUsd);
+console.log(movementsUSD);
+
+const movementsUSDfor = [];
+for (const mov of movements) movementsUSDfor.push(mov * eurToUsd);
+console.log(movementsUSDfor);
+
+const movementsDescriptions = movements.map(
+  (mov, i) =>
+    `Movement ${i + 1}:You ${mov > 0 ? 'depozited' : 'withdrew'} ${Math.abs(
+      mov
+    )}`
+  // if (mov > 0) {
+  //   return `Movement ${i + 1}: You deposited ${mov}`;
+  // } else {
+  //   return `Movement ${i + 1}: You withdrew ${Math.abs(mov)}`;
+  // }
+);
+console.log(movementsDescriptions);
