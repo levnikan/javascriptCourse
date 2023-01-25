@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // BANKIST APP
@@ -76,6 +76,8 @@ const displayMovements = function (movements) {
   });
 };
 displayMovements(account1.movements);
+*/
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 
@@ -100,3 +102,29 @@ TEST DATA 2: Julia's data [9, 16, 6, 8, 3], Kate's data [10, 5, 6, 1, 4]
 
 GOOD LUCK 😀
 */
+
+const checkDogs = function (dogsJulia, dogsKate) {
+  //const dogsJuliaNew = dogsJulia.slice(1, -2);
+  //const dogsJuliaKate = dogsJuliaNew.concat(dogsKate);
+  const dogsJuliaKate = dogsJulia.slice(1, -2).concat(dogsKate);
+
+  //Jonas solution with splice method
+  //const dogsJuliaNew = dogsJulia.slice();
+  //dogsJuliaNew.splice(0, 1);
+  //dogsJuliaNew.splice(-2);
+  //const dogsJuliaKate = dogsJuliaNew.concat(dogsKate);
+
+  dogsJuliaKate.forEach(function (mov, i, arr) {
+    if (mov >= 3) {
+      console.log(
+        `Dog number ${i + 1} is an adult, and it is ${mov} years old`
+      );
+    } else {
+      console.log(
+        `Dog number ${i + 1} is still a puppy 🐶, and it is ${mov} years old`
+      );
+    }
+  });
+};
+checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
+checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
