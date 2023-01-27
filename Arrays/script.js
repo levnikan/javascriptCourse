@@ -149,10 +149,8 @@ currencyUnique.forEach(function (value, _, map) {
 });
 */
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 /*
 const eurToUsd = 1.1;
-// const movementsUSD = movements.map(function (mov) {
 //   return mov * eurToUsd;
 // });
 //MAP method
@@ -177,6 +175,7 @@ const movementsDescriptions = movements.map(
 console.log(movementsDescriptions);
 */
 
+/*
 // FILTER method
 const deposits = movements.filter(function (mov, i, arr) {
   return mov > 0;
@@ -212,3 +211,16 @@ const max = movements.reduce((acc, mov) => {
   }
 }, movements[0]);
 console.log(max);
+*/
+
+// Chaining PIPELINE
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const eurToUsd = 1.1;
+const totalDepositUSD = movements
+  .filter(mov => mov > 0)
+  .map((mov, i, arr) => {
+    //console.log(arr);
+    return mov * eurToUsd;
+  })
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(totalDepositUSD);
