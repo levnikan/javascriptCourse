@@ -64,14 +64,14 @@ const inputClosePin = document.querySelector('.form__input--pin');
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
-/*
+
 const currencies = new Map([
   ['USD', 'United States dollar'],
   ['EUR', 'Euro'],
   ['GBP', 'Pound sterling'],
 ]);
-*/
-//const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /*
 /////////////////////////////////////////////////
@@ -212,7 +212,7 @@ const max = movements.reduce((acc, mov) => {
 }, movements[0]);
 console.log(max);
 */
-
+/*
 // Chaining PIPELINE
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const eurToUsd = 1.1;
@@ -224,3 +224,12 @@ const totalDepositUSD = movements
   })
   .reduce((acc, mov) => acc + mov, 0);
 console.log(totalDepositUSD);
+*/
+
+////FIND method
+const firstWithdrawal = movements.find(mov => mov < 0);
+console.log(firstWithdrawal);
+
+//find elements in object
+const account = accounts.find(acc => acc.owner === 'Jessica Davis');
+console.log(account);
