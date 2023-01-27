@@ -95,6 +95,17 @@ $ git commit -m "My first commit message"
 create mode 100644 homepage/index.html
 ```
 
+This command will open your editor, allowing you to change the commit message of the most recent commit:
+$ git commit --amend
+
+You can set the commit message directly in the command line with:
+$ git commit --amend -m "New commit message"
+
+This can make multi-line commit messages or small corrections more cumbersome to enter.
+Make sure you don't have any working copy changes staged before doing this or they will get committed too. (Unstaged changes will not get committed.)
+
+```
+
 ### git status
 
 This command returns the current state of the repository.
@@ -104,33 +115,40 @@ git status will return the current working branch. If a file is in the staging a
 Usage:
 
 ```
+
 git status
+
 ```
 
 In Practice:
 
 ```
+
 # Message when files have not been staged (git add)
+
 $ git status
 On branch SecretTesting
 Untracked files:
-  (use "git add <file>..." to include in what will be committed)
+(use "git add <file>..." to include in what will be committed)
 
-   homepage/index.html
+homepage/index.html
 
 # Message when files have been not been committed (git commit)
+
 $ git status
 On branch SecretTesting
 Your branch is up-to-date with 'origin/SecretTesting'.
 Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
+(use "git reset HEAD <file>..." to unstage)
 
         new file:   homepage/index.html
 
 # Message when all files have been staged and committed
+
 $ git status
 On branch SecretTesting
 nothing to commit, working directory clean
+
 ```
 
 ### git config
@@ -142,19 +160,25 @@ There are many other variables available to edit in git config. From editing col
 Usage:
 
 ```
+
 git config <setting> <command>
+
 ```
 
 In Practice:
 
 ```
+
 # Running git config globally
+
 $ git config --global user.email "my@emailaddress.com"
 $ git config --global user.name "Brian Kerr"
 
 # Running git config on the current repository settings
+
 $ git config user.email "my@emailaddress.com"
 $ git config user.name "Brian Kerr"
+
 ```
 
 ### git branch
@@ -164,45 +188,62 @@ To determine what branch the local repository is on, add a new branch, or delete
 Usage:
 
 ```
+
 # Create a new branch
+
 $ git branch <branch_name>
 
 # List all remote or local branches
+
 $ git branch -a
 
 # Delete a branch
+
 $ git branch -d <branch_name>
+
 ```
 
 ```
+
 ## 3 operations to raname local and remote branch
+
 # Rename a branch locally
+
 $git branch -m old_branch new_branch
 
 # Delete old remote branch
+
 $git push origin :old_branch
 
 # Push the new branch, set local branch to track the new remote
+
 $git push --set-upstream origin new_branch
+
 ```
 
 In Practice:
 
 ```
+
 # Create a new branch
+
 $ git branch new_feature
 
 # List branches
+
 $ git branch -a
-* SecretTesting
+
+- SecretTesting
   new_feature
   remotes/origin/stable
   remotes/origin/staging
   remotes/origin/master -> origin/SecretTesting
 
 # Delete a branch
+
 $ git branch -d new_feature
 Deleted branch new_feature (was 0254c3d).
+
 ```
 
 ### git checkout
@@ -212,23 +253,31 @@ To start working in a different branch, use git checkout to switch branches.
 Usage:
 
 ```
+
 # Checkout an existing branch
+
 $ git checkout <branch_name>
 
 # Checkout and create a new branch with that name
+
 $ git checkout -b <new_branch>
+
 ```
 
 In Practice:
 
 ```
+
 # Switching to branch 'new_feature'
+
 $ git checkout new_feature
 Switched to branch 'new_feature'
 
 # Creating and switching to branch 'staging'
+
 $ git checkout -b staging
 Switched to a new branch 'staging'
+
 ```
 
 ### git merge
@@ -238,22 +287,26 @@ Integrate branches together. git merge combines the changes from one branch to a
 Usage:
 
 ```
+
 # Merge changes into current branch
 
 $ git merge <branch_name>
+
 ```
 
 In Practice:
 
 ```
+
 # Merge changes into current branch
 
 $ git merge new_feature
 Updating 0254c3d..4c0f37c
 Fast-forward
- homepage/index.html | 297 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 297 insertions(+)
- create mode 100644 homepage/index.html
+homepage/index.html | 297 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1 file changed, 297 insertions(+)
+create mode 100644 homepage/index.html
+
 ```
 
 ### git reset
@@ -266,13 +319,17 @@ Usage:
 Example: delete last commit, you will see last commit in unstaged area, you can add and commit it
 
 ```
+
 $ git reset HEAD
+
 ```
 
 Example: remove all commits until the specific one (to check the history of commits, you can type `git log`):
 
 ```
+
 $ git reset <commit hash>
+
 ```
 
 `git reset --hard` changes HEAD, index and working directory trees
@@ -280,7 +337,9 @@ $ git reset <commit hash>
 Example: delete last commit, you will never see your last commit changes. You must be careful with git --hard, because your local changes may be lost
 
 ```
+
 $ git reset --hard HEAD~
+
 ```
 
 `git reset --soft` changes only HEAD tree
@@ -288,7 +347,9 @@ $ git reset --hard HEAD~
 Example: Move to another commit but no need to touch staging area and index, you can commit your changes (for example rename your commit)
 
 ```
+
 $ git reset --soft HEAD
+
 ```
 
 Use case: if you want to revert your changes back to origin/main (github repo HEAD - latest commit), you can do it in the following ways:
@@ -446,13 +507,17 @@ Examples:
 Revert the latest commit:
 
 ```
+
 $ git revert HEAD
+
 ```
 
 Revert to a specific commit (to check the history of commits, you can type `git log`)
 
 ```
+
 $ git revert <commit hash>
+
 ```
 
 ## Advanced Git Commands
@@ -615,6 +680,8 @@ rm 'css/style.min.css'
 $ git rm -r -f css/
 rm 'css/style.css'
 rm 'css/style.min.css'
+
+```
 
 ```
 
