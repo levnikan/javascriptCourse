@@ -234,6 +234,7 @@ console.log(firstWithdrawal);
 const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 console.log(account);*/
 
+//SOME method
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 //EQUALITY
 console.log(movements.includes(-130));
@@ -241,3 +242,13 @@ console.log(movements.includes(-130));
 //CONDITION
 const anyDeposits = movements.some(mov => mov > 5500);
 console.log(anyDeposits);
+
+//EVERY method
+console.log(movements.every(mov => mov > 0));
+console.log([1, 2, 3].every(mov => mov > 0));
+
+// Separate callback
+const deposit = mov => mov > 0;
+console.log(movements.some(deposit));
+console.log(movements.every(deposit));
+console.log(movements.filter(deposit));
