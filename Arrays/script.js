@@ -71,7 +71,7 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+//const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /*
 /////////////////////////////////////////////////
@@ -225,11 +225,19 @@ const totalDepositUSD = movements
   .reduce((acc, mov) => acc + mov, 0);
 console.log(totalDepositUSD);
 */
-
+/*
 ////FIND method
 const firstWithdrawal = movements.find(mov => mov < 0);
 console.log(firstWithdrawal);
 
 //find elements in object
 const account = accounts.find(acc => acc.owner === 'Jessica Davis');
-console.log(account);
+console.log(account);*/
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+//EQUALITY
+console.log(movements.includes(-130));
+
+//CONDITION
+const anyDeposits = movements.some(mov => mov > 5500);
+console.log(anyDeposits);
